@@ -1,0 +1,15 @@
+D:\code\POO-2023\aula03\Aula03_OO_basic\bin\Debug\net7.0\Aula03_OO_basic.exe
+D:\code\POO-2023\aula03\Aula03_OO_basic\bin\Debug\net7.0\Aula03_OO_basic.deps.json
+D:\code\POO-2023\aula03\Aula03_OO_basic\bin\Debug\net7.0\Aula03_OO_basic.runtimeconfig.json
+D:\code\POO-2023\aula03\Aula03_OO_basic\bin\Debug\net7.0\Aula03_OO_basic.dll
+D:\code\POO-2023\aula03\Aula03_OO_basic\bin\Debug\net7.0\Aula03_OO_basic.pdb
+D:\code\POO-2023\aula03\Aula03_OO_basic\obj\Debug\net7.0\Aula03_OO_basic.csproj.AssemblyReference.cache
+D:\code\POO-2023\aula03\Aula03_OO_basic\obj\Debug\net7.0\Aula03_OO_basic.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\POO-2023\aula03\Aula03_OO_basic\obj\Debug\net7.0\Aula03_OO_basic.AssemblyInfoInputs.cache
+D:\code\POO-2023\aula03\Aula03_OO_basic\obj\Debug\net7.0\Aula03_OO_basic.AssemblyInfo.cs
+D:\code\POO-2023\aula03\Aula03_OO_basic\obj\Debug\net7.0\Aula03_OO_basic.csproj.CoreCompileInputs.cache
+D:\code\POO-2023\aula03\Aula03_OO_basic\obj\Debug\net7.0\Aula03_OO_basic.dll
+D:\code\POO-2023\aula03\Aula03_OO_basic\obj\Debug\net7.0\refint\Aula03_OO_basic.dll
+D:\code\POO-2023\aula03\Aula03_OO_basic\obj\Debug\net7.0\Aula03_OO_basic.pdb
+D:\code\POO-2023\aula03\Aula03_OO_basic\obj\Debug\net7.0\Aula03_OO_basic.genruntimeconfig.cache
+D:\code\POO-2023\aula03\Aula03_OO_basic\obj\Debug\net7.0\ref\Aula03_OO_basic.dll
