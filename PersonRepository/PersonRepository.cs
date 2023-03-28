@@ -8,20 +8,18 @@ namespace Aula03_OO_basic
     public class PersonRepository
     {
         public static List<Person> PersonsList = new List<Person>();
-        public void Add(Person person){
+        public static void Add(Person person){
             PersonsList.Add(person);
         }
-
-        public void Show(){
+        public static void Show(){
             if(PersonsList == null){
                 System.Console.WriteLine("\nNenhum usuário cadastrado!");
             }
             foreach(var p in PersonsList){
-                Console.WriteLine($"\nNome: {p.Name} | Telefone: {p.Phone}\n");
+                Console.WriteLine($"\n Id: {p.Id} | Nome: {p.Name} | Telefone: {p.Phone} | Cidade: {p.City.Name}");
             }
         }
-
-        public void Edit(string userName){
+        public static void Edit(string userName){
             string user = userName;
             var userFound = PersonsList.Where(p => p.Name.Equals(user)).FirstOrDefault();
             
@@ -29,25 +27,36 @@ namespace Aula03_OO_basic
                 System.Console.WriteLine($"\nNome: {userFound.Name} \nTelefone: {userFound.Phone}");
 
                 System.Console.WriteLine("\nDigite o novo nome:");
-                string name = Console.ReadLine()!;
-                if(name == null){
+                string newName = Console.ReadLine()!;
+
+                if(newName == null || newName == ""){
                     System.Console.WriteLine("\nNome não alterado!");
                 }else{
-                    userFound.Name = name;
+                    userFound.Name = newName;
                 }
+
                 System.Console.WriteLine("\nDigite o novo telefone:");
-                Nullable<long> phone = Convert.ToInt64(Console.ReadLine());
-                if(phone.HasValue){
+                string newPhone = Console.ReadLine();
+                if(newPhone == "" || newPhone == null){
                     System.Console.WriteLine("\nTelefone não alterado!");
                 }else{
-                    userFound.Phone = phone;
-                }                
+                    userFound.Phone = Convert.ToInt64(newPhone);
+                    System.Console.WriteLine("\nUsuário alterado!");
+                }
+
+                System.Console.WriteLine("\nDigite a nova cidade:");
+                string newCity = Console.ReadLine();
+                if(newCity == null || newCity == ""){
+                    System.Console.WriteLine("\nCidade não alterada!");
+                }else{
+                    userFound.Name = newCity;
+                }
             }else{
                 System.Console.WriteLine("\nCliente não cadastrado!");
             }
         }
 
-        public void Remove(string userName){
+        public static void Remove(string userName){
             string user = userName;
             var userFound = PersonsList.Where(p => p.Name.Equals(user)).FirstOrDefault();
 
@@ -57,6 +66,27 @@ namespace Aula03_OO_basic
             }else{
                 System.Console.WriteLine("\nNenhum usuário encontrado!");
             }
+        }
+
+        public static List<Person> getPersonByName(string name){
+            var userFound = PersonsList.FindAll(p => p.Name.Contains(name));
+
+            return userFound;
+        }
+
+        public static int getPersonByIndex(int id){
+            int i = 0;
+            
+            foreach(Person p in PersonsList){
+                if(p.Id == id){
+                    return i;
+                }
+
+                throw new ArgumentException("Nenhum usuário foi encontrado!");
+                i++;
+            }
+
+            return -1;
         }
     }
 }

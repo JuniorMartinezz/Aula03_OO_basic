@@ -11,10 +11,13 @@ namespace Aula03_OO_basic
         public string Name { get; set; } = "";
         public Nullable<long> Phone { get; set; }
 
-        public Person(string name, long phone, int id){
+        public City City { get; set; }
+
+        public Person(string name, long phone, int id, City city){
             this.Name = name;
             this.Phone = phone;
             this.Id = id;
+            this.City = city;
         }
     }
 }
